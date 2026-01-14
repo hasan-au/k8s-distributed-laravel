@@ -10,6 +10,16 @@ data:
 
         index index.php index.html;
 
+
+        client_max_body_size 100M;
+        location /storage/ {
+            alias /var/www/storage/app/public/;
+            expires 1y;
+            add_header Cache-Control "public, immutable";
+            try_files $uri =404;
+        }
+
+
         location / {
             try_files $uri $uri/ /index.php?$query_string;
         }

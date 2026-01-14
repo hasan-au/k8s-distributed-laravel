@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: laravel-worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: laravel-worker
+  template:
+    metadata:
+      labels:
+        app: laravel-worker
+    spec:
+      # terminationGracePeriodSeconds: 60
+      volumes:
+        - name: laravel-env-volume
+          secret:
+            secretName: laravel-env-secret
+      containers:
+        - name: laravel-worker
+          image: laravel-app-local-image:latest
+          imagePullPolicy: IfNotPresent
+          command:
+            - sh
+            - -c
+            - |
+              php /var/www/artisan queue:work \
+                --sleep=3 \
+                --tries=3 \
+                --timeout=90
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "500m"
+            limits:
+              memory: "1Gi"
+              cpu: "1"
+          volumeMounts:
+            - name: laravel-env-volume
+              mountPath: /var/www/.env
+              subPath: .env
+          # livenessProbe:
+          #   exec:
+          #     command: ["sh", "-c", "ps aux | grep -v grep | grep -q 'php artisan queue:work'"]
+          #   initialDelaySeconds: 20
+          #   periodSeconds: 10
+

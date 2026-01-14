@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: laravel-env-secret
+type: Opaque
+stringData:  # Using StringData for easier editing of plain text
+  .env: | # i used .env key to store all env variables in one file
+    APP_ENV=production
+    APP_KEY=base64:OTC7azRyRVGkW1Mzuw5aP8Vp99Wx6Woz1TEis7c9sE4=
+    APP_DEBUG=false
+    APP_NAME=Laravel
+    DB_CONNECTION=mysql
+    DB_HOST=mysql-service.default.svc.cluster.local
+    DB_PORT=3306
+    DB_DATABASE=laravel_db
+    DB_USERNAME=laravel
+    DB_PASSWORD=laravel123
+    CACHE_DRIVER=redis
+    REDIS_CLIENT=predis
+    REDIS_HOST=redis-service
+    REDIS_PASSWORD=
+    REDIS_PORT=6379
+    QUEUE_CONNECTION=redis

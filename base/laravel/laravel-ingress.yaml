@@ -1,0 +1,44 @@
+# laravel-ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: laravel-ingress
+  annotations:
+    # Force HTTPS
+    # nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    # nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+
+    # Upload limits (adjust if you upload bigger files)
+    nginx.ingress.kubernetes.io/proxy-body-size: "20m"
+
+    # Timeouts (adjust to your app)
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "30"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "120"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "120"
+spec:
+  ingressClassName: nginx
+
+  # tls:
+  #   - hosts:
+  #       - app.example.com
+  #     secretName: laravel-tls
+
+  rules:
+    - host: laravel.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: laravel-service
+                port:
+                  number: 80
+
+          # - path: /
+          #   pathType: Prefix
+          #   backend:
+          #     service:
+          #       name: laravel-api-service
+          #       port:
+          #         number: 80

@@ -1,5 +1,10 @@
-resources:
-- mysql-deployment.yaml
-- mysql-service.yaml
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+
+resources:
+
+  - mysql-service.yaml
+  - mysql-statefullset.yaml
+  - mysql-secret.yaml
+  # - mysql-pvc.yaml
+  - mysql-pv.yaml
