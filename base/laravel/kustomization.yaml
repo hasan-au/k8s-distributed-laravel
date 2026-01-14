@@ -9,3 +9,5 @@ resources:
   # - laravel-env.yaml
   - laravel-worker.yaml
   - laravel-ingress.yaml
+  - laravel-hpa.yaml
+  - laravel-worker-hpa.yaml
