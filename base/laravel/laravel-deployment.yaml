@@ -28,7 +28,7 @@ spec:
       containers:
         - name: laravel
           image: 005423365664.dkr.ecr.ap-southeast-2.amazonaws.com/laravel-private/laravel-prod-image:latest
-          imagePullPolicy: Never
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 9000
           command: ["php-fpm", "-F"]
