@@ -1,12 +1,12 @@
 # Ignore .env files
 #dev
-.env
-.env.*
+# .env
+# .env.*
 #prod
 base/secrets/laravel-secrets.yaml
 kubeseal
 *.tar.gz
 # Kubernetes secrets
-*-secret.yaml
-*-secrets.yaml
-secret*.yaml
+# *-secret.yaml
+# *-secrets.yaml
+# secret*.yaml
