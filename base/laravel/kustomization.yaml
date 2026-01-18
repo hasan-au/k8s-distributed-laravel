@@ -6,7 +6,7 @@ resources:
   - laravel-service.yaml
   - nginx-configmap.yaml
   # - env-configmap.yaml
-  # - laravel-env.yaml
+  - laravel-env.yaml
   - laravel-worker.yaml
   - laravel-ingress.yaml
   - laravel-hpa.yaml
