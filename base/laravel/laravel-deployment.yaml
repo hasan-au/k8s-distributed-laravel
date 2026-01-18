@@ -9,6 +9,9 @@ spec:
   selector:
     matchLabels:
       app: laravel
+  
+  revisionHistoryLimit: 2
+  
   template:
     metadata:
       labels:
@@ -24,7 +27,7 @@ spec:
 
       containers:
         - name: laravel
-          image: laravel-app-local-image:latest
+          image: 005423365664.dkr.ecr.ap-southeast-2.amazonaws.com/laravel-private/laravel-prod-image:latest
           imagePullPolicy: Never
           ports:
             - containerPort: 9000
