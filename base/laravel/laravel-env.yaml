@@ -10,7 +10,7 @@ stringData:  # Using StringData for easier editing of plain text
     APP_DEBUG=false
     APP_NAME=Laravel
     DB_CONNECTION=mysql
-    DB_HOST=laravel-service
+    DB_HOST=mysql-service
     DB_PORT=3306
     DB_DATABASE=laravel_db
     DB_USERNAME=laravel
