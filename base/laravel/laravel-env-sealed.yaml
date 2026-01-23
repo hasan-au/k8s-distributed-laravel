@@ -3,7 +3,7 @@ kind: SealedSecret
 metadata:
   creationTimestamp: null
   name: laravel-env-secret
-  namespace: default
+  # namespace: default
 spec:
   encryptedData:
     .env: AgC+zlTd6nOL0trW1QGwOgjEJU+J/3GZAPiNeTOScz8blDYEFeX2CP+AmAyx/c9tCyNKDuzLtoFyC2ATUXV3d6mIUecaEiXXpfICT4PB7CRpusR4rTL3417OE/n7/oHfx8TCnW+vvUZit1/LhYnJitXZECd5LHS/phkiE77z+ZOj2y7Zuqbxm756euSjub+sm2peINUQm8haoX7OvKUj5dxy9kpUTpDwgVGKZdBcWkVhEUJ7Vzwpr9ahDaVTudpIwpZe7ToFFYgvrf8Kne7gUg0B7B9EboM+0NyQNLIU0Z4pC9NhbZYkX9hBx9Bf+EyR+op2J5eDha8ya+JjBNhdopZ/3IOY/7GJ+x8ZDnHueKYVcle45lOJH0/fW8ZDt1njrZ68p8UJY3B6stJuwDp9r5WA1//ITRqzpe4x3NP1wiElSmTEnsoZHto3su8kvxZoRdlwhQH+2oJKxhPtjjeV/HP6MhZmLlm4vo+rSQNIrNOIZBzKMoINig9kXEKvoQ4V/ZZoLvsmUZAWsYciL0LBOmb50Fjr+xT2Lav6wP+RyJaZZvLnAjQMQQEIpfKKPKYiwXDRP3QfSD91BRnKv00uVYYmUu2yYgU4D9gXpY/1nIs4qoWx3QGTDD+SAWLJmBAvxVLxlu3SRk/rkwiWqFBvk0IEUuqko/gCSz/habTahru2LdlTLpwBBknn1r1w4GTkrx1VZGpm7lVBMK0W4HC59ZT/DdR1rDdZLs/WKZ2p+CjDePgs0TQmvCauotoSLRDBRF7WQV3ai+CsIqVNdrykTsQw9jsRR8ZXnP3AjkAPveBwNfeXsfZ7UGuqeJi51uWpDwf1HOn3fBrmnviiDrR6Ze5GD2YM1ft07TOvwbC8C/8Uxto/yfe56HWgDaAqy3NQ+cauUVhHA1izG8efn3EuSlM8ZM8f4xTRQlTc5OecqGuy1qHtrcaTq7XajkGwJ7mJ6NYcOxRmeIooOm+4epbnGgKx1P94SJJAJG/vn27jBzv0wVWVhyj2jOQGUWeBoHtZv8XyjjhnL1K9U5GJs/SWZjBliUKQvYcAnbQ1BVHX1BhQx17ePmq55FEt+g2w5URQYogNnWMn9VizZ190VYOPzIi/HdgFyR7Yewkzizr4l/85JmVcH+7SIn6e2dI/clKKdI9g6DPf+lG4yvPCel8Yei/r
@@ -11,6 +11,6 @@ spec:
     metadata:
       creationTimestamp: null
       name: laravel-env-secret
-      namespace: default
+      # namespace: default
     type: Opaque
 ---
