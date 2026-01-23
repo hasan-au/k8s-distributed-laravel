@@ -10,3 +10,5 @@ kubeseal
 # *-secret.yaml
 # *-secrets.yaml
 # secret*.yaml
+base/mysql/mysql-secret.yaml
+base/laravel/laravel-env.yaml

@@ -5,6 +5,7 @@ resources:
 
   - mysql-service.yaml
   - mysql-statefullset.yaml
-  - mysql-secret.yaml
+  # - mysql-secret.yaml
+  - mysql-secret-sealed.yaml
   # - mysql-pvc.yaml
   # - mysql-pv.yaml

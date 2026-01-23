@@ -42,11 +42,11 @@ spec:
 
           resources:
             requests:
-              memory: "128Mi"
-              cpu: "500m"
-            limits:
               memory: "512Mi"
-              cpu: "1"
+              cpu: "750m"
+            limits:
+              memory: "1Gi"
+              cpu: "1.5"
           volumeMounts:
             - name: laravel-env-volume
               mountPath: /var/www/.env
