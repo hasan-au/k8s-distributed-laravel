@@ -1,0 +1,16 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: laravel-env-secret
+  namespace: laravel-app
+spec:
+  encryptedData:
+    .env: AgBB7IxBRyV5TpdnXxAL5bnDZEhLNqppiccW/FX8SJsUAnlWOfa6fY+W/LlVBZRtY4KKBiROe/YuGOdX/BDDehAlZVyrZDgGZvQWfvPR5GviBeHYAwIqzi2mjnIXw+q7tnbQ1T/I6dYPzGJgRZ8QKHUNC4PkrS/fdNu8OQAp+NFBHFqJUNa1HwwE9VCGlErRvhaSox2u/zcp8jae7laD7PyBHlDLsK6l1/S2KMQbRZLgnnQgMpHy1ZhR8RF9LIofpaE1xOptQ61bvfCx5Ale0GGUMiXCufZtwTT8+O0LlJHkvH055SY6wCcaxAbDaRtdzawAuFj8mWVauyYDoT2OAAXO8A3UJxWi3Z3aZ/Vvv0IAybmyWycsr4PuB69lV+1xyDgdv+9/hyg2scnFlCOvBRda1J57okbyckiptxb37626xk8wB2O4s0fUmsG+ylhicGIHUQuJBUyxxewl5B7opZDGkG68G7JS4zK/88KfBIM10LDyB3+557sjHe/tRX8pQyOQViVDCWKlOpM7zpg4lQrW7UHAtzy0gK0lPLh3iT5Ca7/fifaGELpcgyg6afsNCeukh444NRVt7xcUTWeOf3NyL7kb7sn15VSkCI6qqWGGn4dE4ZPYmmRMaP2qfspDUXPm+IhLxKu5u/Qkyn8hrYbNYySljC6RoY/vUL9UgSWjCHbJRHcYi130IRlhRJorl6Mcx6t/Dth9dUo2N1Z0mIFWYYzXB2Ygs3LSw5soCN1a7ZC9ufa4S6EkovitTj2nqQGCjW3Yv9cwuVOJ1LiQWIpuP24iB4m03XJz2UjdHh6WmRLQEvr3OgICOREOApooPh6HdU3Bye4rhFhS5PY8/jZUqFnmaGjQDqL9x97zNkiJi+iU/tXh4YNnwbgkU9LI8JcB5oyNa0oPWx0GBsplnRCjcXcOqLFA+FZ326mHj2Tg0ukwqwjvfHY56T2b/8wB4k8NEdJ960KmItkPn2kNdsnAyQXlElwWMFeY/Zro1PONYbggY0GRuWADhtay4pH4Kyv6vhEyiadceJ+Y9S+nIWvXLSXrl99HhybNu6yk6RId8EIwxVa1ZTZ3v9d5KnJRPRm0rRiCnUoDF8Hnxr/CScesp0Lw4mspcsbkP/5GEKaHeOqzXT64sS+KvWq+ATvyoQDflfM6zON8D7U5sqvfjNFj
+  template:
+    metadata:
+      creationTimestamp: null
+      name: laravel-env-secret
+      namespace: laravel-app
+    type: Opaque
+---
