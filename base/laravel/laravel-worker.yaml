@@ -20,7 +20,7 @@ spec:
             secretName: laravel-env-secret
       containers:
         - name: laravel-worker
-          image: 005423365664.dkr.ecr.ap-southeast-2.amazonaws.com/laravel-private/laravel-prod-image:latest
+          image: 005423365664.dkr.ecr.ap-southeast-2.amazonaws.com/laravel-app-k8s:20260124-044307-b5faf60
           imagePullPolicy: IfNotPresent
           command:
             - sh
