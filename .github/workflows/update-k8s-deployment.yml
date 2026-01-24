@@ -25,7 +25,8 @@ jobs:
       - name: Checkout GitOps Repository
         uses: actions/checkout@v4
         with:
-          # token: ${{ secrets.GITOPS_REPO_TOKEN }} use this with PAT 
+          # token: ${{ secrets.GITOPS_REPO_TOKEN }} # use this with PAT 
+          token: ${{ github.token }}
           fetch-depth: 0
 
       - name: Extract Image URI
